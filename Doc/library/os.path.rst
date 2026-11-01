@@ -415,7 +415,9 @@ the :mod:`glob` module.)
 
    Normalize the case of a pathname.  On Windows, convert all characters in the
    pathname to lowercase, and also convert forward slashes to backward slashes.
-   On other operating systems, return the path unchanged.
+   On other operating systems, :class:`str` and :class:`bytes` paths are
+   returned unchanged, and other :term:`path-like objects <path-like object>`
+   are converted to :class:`str` or :class:`bytes`, as with :func:`os.fspath`.
 
    .. versionchanged:: 3.6
       Accepts a :term:`path-like object`.
